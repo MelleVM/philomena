@@ -1,0 +1,151 @@
+.admin-container {
+    width: 100%;
+    height: 100%;
+    padding: 15px 15px 15px 92.5px;
+}
+
+.list-container-parent {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+    font-family: 'Segoe UI Bold';
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+
+    .list-container {
+        height: 100%;
+        border-radius: 10px;
+        background-color: #FEFEFF;
+        padding: 10px;
+        color: $main-color;
+        position: relative;
+
+        
+        .btn-reusable {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        ul.all-list {
+            width: 100%;
+            padding: 5px 0;
+            position: relative;
+            list-style-type: none;
+
+            li {
+                width: 100%;
+                height: 40px;
+                margin: 5px 0px;
+                position: relative;
+                font-family: 'Roboto',
+                    sans-serif;
+
+                .pull-left {
+                    position: absolute;
+                    left: 0;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    color: black;
+                    font-weight: 100;
+                    width: 40px;
+
+                    i {
+                        font-size: 200%;
+                    }
+
+                    svg {
+                        font-size: 160%;
+                    }
+                }
+
+                .pull-right {
+                    position: absolute;
+                    left: 45px;
+                    height: 100%;
+                    width: calc(100% - 45px);
+                    border-bottom: 0.5px solid #cdcdd1;
+                    align-items: center;
+                    color: black;
+
+                    span {
+                        font-size: 14px;
+                    }
+
+                    p {
+                        width: 100%;
+                        font-size: 12px;
+                        color: #333;
+                    }
+
+                    i {
+                        position: absolute;
+                        display: flex;
+                        right: 10px;
+                        top: 12.5px;
+                        font-size: 18px;
+                        line-height: 10px;
+                        cursor: pointer;
+                    }
+
+                    .dropdown {
+                        position: absolute;
+                        top: 100%;
+                        right: 0;
+                        background: white;
+                        width: 120px;
+                        border-radius: 4px;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                        text-align: left;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: 0.3s ease;
+                        z-index: 2;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: -5px;
+                            right: 14px;
+                            width: 0;
+                            height: 0;
+                            box-shadow: 2px -2px 6px rgba(0, 0, 0, 0.05);
+                            border-top: 6px solid #FFFFFF;
+                            border-right: 6px solid #FFFFFF;
+                            border-bottom: 6px solid transparent;
+                            border-left: 6px solid transparent;
+                            transform: rotate(-45deg);
+                        }
+
+
+                        &.active {
+                            visibility: visible;
+                            opacity: 1;
+                        }
+
+                        li {
+                            z-index: 1;
+                            position: relative;
+                            background: white;
+                            padding: 5px 20px;
+                            color: #666;
+                            list-style-type: none;
+                            height: unset;
+                            cursor: pointer;
+                            line-height: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}

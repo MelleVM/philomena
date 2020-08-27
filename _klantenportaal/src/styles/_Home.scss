@@ -1,0 +1,29 @@
+.homepage-section-1 {
+    padding: 15px;
+    background-color: $blue;
+    margin: 15px;
+    position: relative;
+    border-radius: 10px;
+
+    .current-datetime {
+        width: 60%;
+        font-size: 150%;
+        color: $light-color;
+
+        h2 {
+            font-weight: 400;
+        }
+
+        h4 {
+            font-weight: 400;
+        }
+
+        h3 {
+            font-weight: 300;
+        }
+    }
+}
+
+.homepage-section-2 {
+    position: relative;
+}
